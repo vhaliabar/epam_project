@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+<div class='content'>
+    <h1 style='text-align: center'>Update Doctor's details</h1>
+    <br>
+
+    <form action='' method='POST'>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Name"
+             aria-describedby="inputGroup-sizing-default" name='name' value = '{{doctor.name}}'>
+            </div>
+
+
+       <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Email"
+             aria-describedby="inputGroup-sizing-default" name='email' id='content' value = '{{doctor.email}}'>
+            </div>
+
+
+      <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Experience(years)</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Experience"
+             aria-describedby="inputGroup-sizing-default" name='years_xp' id='content' value = '{{doctor.years_xp}}'>
+            </div>
+        
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Specialization</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Specialization"
+                aria-describedby="inputGroup-sizing-default" name='specialization' value = '{{doctor.specialization}}'>
+            </div>
+
+            
+        <input class='btn btn-secondary'type='submit' value='Update Task'>
+        <br>
+        <br>
+        <span class="bs-example">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 bg-light text-right">
+                        <button type="button" class="btn btn-primary pull-right">Cancel</button>
+                        <button type="button" class="btn btn-warning ml-2">Save</button>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </form>
+</div>
+{% endblock %}

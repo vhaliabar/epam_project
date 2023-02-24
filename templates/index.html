@@ -1,6 +1,9 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<br><br>
-<h2>This is wellcome page</h2>
+<br>
+<h2>Welcome to our Clinic</h2><br>
+
+<a href="{{ url_for('create_doctor') }}" class="btn btn-primary btn-lg active" role="button">create doctor</a>
+
 {% endblock body %}

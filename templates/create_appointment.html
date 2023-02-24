@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br><br>
+<h2>Add appointment:</h2>
+<br><br>
+<hr> 
+<br>
+<form method='POST' action='' class="row g-3">
+    <div class="col-md-4">
+      <label for="validationDefault01" class="form-label">Your first name</label>
+      <input type="text" class="form-control" id="validationDefault01" name='first_name'>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault02" class="form-label">Your last name</label>
+      <input type="text" class="form-control" id="validationDefault02" name='last_name'>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Brief problem description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='data'></textarea>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="inputState">Chooose the doctor</label>
+      <select id="inputState" class="form-control" name='doctor_id'>
+        <option selected>Choose...</option>
+        {% for option in option_list %}
+        <option>{{ option }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+
+    <div class="col-12">
+      <button method='POST' class="btn btn-secondary" type="submit">Submit form</button>
+    </div>
+  </form>
+{% endblock body %}

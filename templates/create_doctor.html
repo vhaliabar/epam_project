@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br><br>
+<p>Add doctor:</p>
+<br>
+<hr>
+<br>
+<form method='POST' class="row g-3">
+    <div class="col-md-4">
+      <label for="validationDefault02" class="form-label">Name</label>
+      <input type="text" class="form-control" id="validationDefault02" name='name'>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefaultUsername" class="form-label">Email</label>
+      <div class="input-group">
+        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required name='email'>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationDefault03" class="form-label">Experience</label>
+      <input type="text" class="form-control" id="validationDefault03" required name='years_xp'>
+    </div>
+     <div class="col-md-6">
+      <label for="validationDefault05" class="form-label">Specialization</label>
+      <input type="text" class="form-control" id="validationDefault05" required name='specialization'>
+    </div>
+    <div class="col-12">
+        <br>
+      <button method='POST' class="btn btn-secondary" type="submit">Submit form</button>
+    </div>
+  </form>
+{% endblock body %}
